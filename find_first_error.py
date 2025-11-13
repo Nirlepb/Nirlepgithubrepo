@@ -3,7 +3,7 @@ def find_first_error(log_data):
         timestamp ,level,message=enter
     if level=="ERROR":
         return timestamp    
-    return none   
+    return None  
 log_data = [
     ('08:30:01', 'INFO', 'Server started'),
     ('08:30:05', 'WARN', 'Low disk space'),
