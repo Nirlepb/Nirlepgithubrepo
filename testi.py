@@ -230,3 +230,74 @@
 #     if j==n:
 #         count+=1
 # print(f"{l}\n{n}:{count}")                
+# def main():
+#     state_languages_data = {
+#         "Andhra Pradesh": {
+#             "Official": ["Telugu", "English"],
+#             "Other Spoken": ["Urdu", "Hindi", "Banjara", "Tamil", "Kannada", "Marathi", "Oriya"]
+#         },
+#         "Karnataka": {
+#             "Official": ["Kannada", "English"],
+#             "Other Spoken": ["Urdu", "Telugu", "Tamil", "Marathi"]
+#         },
+#         "Kerala": {
+#             "Official": ["Malayalam", "English"],
+#             "Other Spoken": ["Hindi", "Kannada", "Tamil", "Tulu"]
+#         },
+#         "Tamilnadu": {
+#             "Official": ["Tamil", "English"],
+#             "Other Spoken": ["Telugu", "Kannada", "Urdu", "Malayalam", "Hindi"]
+#         },
+#         "Telangana": {
+#             "Official": ["Telugu", "Urdu"],
+#             "Other Spoken": ["Hindi", "Tamil", "Kannada", "Marathi", "Oriya"]
+#         }
+#     }
+#     print("--- Language Analysis Menu ---")
+#     print("1. Which state uses the maximum number of languages?")
+#     print("2. List the number of spoken languages (excluding official) for a given state.")
+#     print("3. Display states where a given language is spoken, but not official.")
+#     print("4. List the unique languages (used only in one state).")
+#     print("------------------------------")
+#     try:
+#         user_input=input("enter your choice:").strip()
+#         if "," in user_input:
+#             choice,arugument=user_input.split(",",1)
+#         else:
+#             choice=user_input
+#             arugument=None
+#         menu_choice=int(choice)
+#     except ValueError:
+#         print("error")
+#         return
+#     if menu_choice==1:
+#         max_languages=-1
+#         max_state="None"
+#     for state,data in state_languages_data.items():
+#         total_languages=len(data["Official"])+len(data["Other Spoken"]) 
+#         if total_languages>max_languages:
+#             max_languages=total_languages
+#             max_state=state
+#     print(max_state)
+#     if menu_choice==2:
+#         state_name=arugument
+#         if state_name in state_languages_data:
+#             count=len(state_languages_data[state_name]["Other Spoken"])
+#             print(count)
+#         else:
+#             print("not found")
+#     if menu_choice==3:
+#         language=arugument
+#         found_states=[]
+#         for state,data in state_languages_data.items():
+#             is_spoken=language in data["Other Spoken"]
+#             is_not_official = language not in data["Official"]
+#             if is_spoken and is_not_official:
+#                 found_states.append(state)
+#         if found_states:
+#             print(" ".join(found_states))
+#         else:
+#             # If no states are found, print nothing or handle as needed (printing None is safer)
+#             pass            
+# if __name__ =="__main__":      
+#    main()                        
