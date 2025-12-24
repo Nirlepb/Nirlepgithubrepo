@@ -10,7 +10,7 @@ def newest_campus(newcampus):
     for i in newcampus:
         if i["year_established"]>max:
             max=i["year_established"]
-        final=i["campus_location"]    
+            final=i["campus_location"]    
     return final
 def program(all_campus):
     hip=[]
@@ -32,9 +32,6 @@ def user_input(campus_list_offered):
           
             num+=1        
     return num           
-
-    
-    
 def one_uniqe(uniqe):
     ki=[]
     uni_programs=[]
