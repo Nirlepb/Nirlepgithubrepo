@@ -9,8 +9,6 @@ for i in data.keys():
         IDS.append(i)
 def question2(bus_ids):
     trips_completed=[]
-    for i in data.keys():
-        bus_ids.append(i)
     for i in data.values():
         trips_completed.append(i[1])
     for i in range(0,len(trips_completed)):

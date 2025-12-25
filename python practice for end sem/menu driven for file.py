@@ -1,3 +1,4 @@
+list1=[]
 def file_write():
    f = open("ni.txt","w")
    user=input("enter the text you whant to enter:-")
@@ -6,21 +7,23 @@ def file_write():
    
 def file_read():
     f =open("ni.txt",'r')
-    result=f.readline()
+    result=f.read()
     print(result)
     print("file read✌️")  
 def file_append():
-    f=open("ni.txt","a")
+    f=open("ni.txt","a+")
     user=input("enter the text to append:-")
-    f.write(user + "\n")
-
+    f.write(user)
     print("appended ")
 def search():
     word=input("enter the target word:_")
     count=0
     f=open("ni.txt","r")
     for line in f:
-        count+= line.lower().count(word.lower())
+        count+= line.count(word)
+        list1.append(line.split('\n'))
+        print(line)
+    print(list1)
     print(f"'{word}' found {count} times.")    
             
 print("""
@@ -32,12 +35,8 @@ print("""
 
        4. Search a word in file
 
-        5.Exit
-      
-      
-      
-      
-      """)            
+       5.Exit
+         """)            
 while True:
     choice=int(input("----------enter the choice------------"))
     if choice==1:
