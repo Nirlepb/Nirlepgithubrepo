@@ -1,0 +1,19 @@
+def searching():
+    books_id=[]
+    n=int(input("enter no of books:-"))
+    for i in range(n):
+        
+        user=int(input("enter the book id:-"))
+        books_id.append(user)
+    Target=int(input("enter the target value:-"  ))
+
+    if Target in books_id:
+        
+        print("the index of the taget value:-",books_id.index(Target))
+    
+        
+    return books_id
+searching()                
+                
+        
+    

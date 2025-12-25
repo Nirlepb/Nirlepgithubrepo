@@ -1,0 +1,11 @@
+def counting(data):
+    counts={}
+    for items in data:
+        if items in counts:
+            counts[items]+=1
+        else:
+            counts[items]=1
+    return counts        
+data=["apple","apple","bananna","mango"]
+print(counting(data))                
+            
