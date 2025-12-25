@@ -1,11 +1,19 @@
-def counting(data):
-    counts={}
-    for items in data:
-        if items in counts:
-            counts[items]+=1
-        else:
-            counts[items]=1
-    return counts        
-data=["apple","apple","bananna","mango"]
-print(counting(data))                
+# def counting(data):
+#     counts={}
+#     for items in data:
+#         if items in counts:
+#             counts[items]+=1
+#         else:
+#             counts[items]=1
+#     return counts        
+# data=["apple","apple","bananna","mango"]
+# print(counting(data))                
+# def reverse_string(s):
+#     rev = ""
+#     for ch in s:
+#         rev = ch + rev
+#     return rev
+
+# print(reverse_string("hello"))
+
             
