@@ -41,28 +41,29 @@ def one_uniqe(uniqe):
         if uni_programs.count(j)==1:
             ki.append(j)    
     return ki
-print(one_uniqe(data))        
-print("====================colleage=================")
-print("1. Determine the newest campus (the one established most recently.")
-print("2.Create a set of all programs offered across all campuses.")
-print("3. When a minimum student population number (e.g., 5000) is provided, list the names of all campuses that exceed this population threshold.")
-print("4.When a program name (e.g., 'Arts') is given as input, display the number of campuses")
-print("5.that offer that programList all the programs that are offered by exactly one of the five campuses (unique programs)")
-print("6.exit")
-print("===============================================")
 while True:
-    choice=int(input("ENTER THE CHOICE:"))
-    if choice==1:
-        print(newest_campus(data))
-    if choice==2:
-        print(program(data))
-    if choice==3:
-        print(min_student(data))
-    if choice==4:
-        user=input("ENTER THE COURCE")
-        print(user_input(data))
-    if choice==5:
-        print(one_uniqe(data)) 
-    else:
-        break                            
+    print(one_uniqe(data))        
+    print("====================colleage=================")
+    print("1. Determine the newest campus (the one established most recently.")
+    print("2.Create a set of all programs offered across all campuses.")
+    print("3. When a minimum student population number (e.g., 5000) is provided, list the names of all campuses that exceed this population threshold.")
+    print("4.When a program name (e.g., 'Arts') is given as input, display the number of campuses")
+    print("5.that offer that programList all the programs that are offered by exactly one of the five campuses (unique programs)")
+    print("6.exit")
+    print("===============================================")
+    while True:
+        choice=int(input("ENTER THE CHOICE:"))
+        if choice==1:
+            print(newest_campus(data))
+        if choice==2:
+            print(program(data))
+        if choice==3:
+            print(min_student(data))
+        if choice==4:
+            user=input("ENTER THE COURCE")
+            print(user_input(data))
+        if choice==5:
+            print(one_uniqe(data)) 
+        else:
+            break                            
             
